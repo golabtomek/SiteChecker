@@ -33,6 +33,7 @@ namespace WebChecker
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+            this.Closing -= Window_Closing;
         }
 
         private void myNotifyIcon_MouseLeftButtonDown(object sender, RoutedEventArgs e)
@@ -54,7 +55,6 @@ namespace WebChecker
             
             //Do not close application
             e.Cancel = true;
-
         }
     }
     
