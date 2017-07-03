@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace WebChecker.Model
     public class Emails
     {
         private List<string> EmailAddresses;
-        private string path = "emails.xml";
+        private string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "emails.xml");
 
         public Emails()
         {

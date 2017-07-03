@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 
 namespace WebChecker.Model
 {
     public class Sites
     {
         public List<Site> SitesList { get; set; }
-        string path = "sites.xml";
+        string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "sites.xml");
         
         public Sites()
         {
